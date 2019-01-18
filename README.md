@@ -1,7 +1,12 @@
-# grapple
-Customizable data grid for Rails
+# Grapple
+
+Grapple is a Customizable data grid for Rails. Grapple exposes a `table_for` method
+that uses a `GridBuilder` class to build data grids in your views. Use either one of
+four `GridBuilders` that work out of the box, or extend one and customize it
+to suit your needs.
 
 ## Features
+
 * Modular design
 * Server side rendering
 * Usable out of the box
@@ -23,6 +28,7 @@ gem 'grapple'
 ```
 
 ## Dependencies
+
 * Rails 3+
 
 Optional Dependencies:
@@ -40,6 +46,7 @@ AjaxDataGridBuilder - DataGridBuilder that uses AJAX to retrieve results when so
 
 In an initializer set the default builder:
 ``` ruby
+# config/initializers/grapple.rb
 Grapple::Helpers::TableHelper.builder = Grapple::AjaxDataGridBuilder
 ```
 
@@ -76,7 +83,7 @@ app/views/posts/index.html.erb
 		<% end %>
 		<%= t.column_headings %>
 	<% end %>
-	<%= t.body do |item| %>
+	<%= t.body do |post| %>
 		<td><%= post.name %></td>
 		<td><%= post.title %></td>
 		<td><%= post.content %></td>
