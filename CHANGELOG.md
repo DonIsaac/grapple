@@ -143,6 +143,11 @@ Then simply replace the `column_headings` helper with `ransack_colhead` in your 
 <% end %>
 ```
 
+## Available Options
+
+* `options[:ransack]: Ransack::Search`- Required. The ransack search object used by the form.
+* `options[:method]: String or Symbol` - Optional. The HTTP Method Ransack will use when sorting. Defaults to `:get`.
+
 ## RansackColumnHeadings vs. ColumnHeadings
 
 There are a few important, albeit small, differences between `RansackColumnHeadings`
