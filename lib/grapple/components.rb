@@ -21,6 +21,7 @@ module Grapple
 		autoload :WillPaginateInfobar
 		autoload :KaminariPagination
 		autoload :KaminariInfobar
-
+		autoload :RansackSearchForm
+		autoload :RansackColumnHeadings
 	end
 end

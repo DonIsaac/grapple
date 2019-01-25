@@ -6,7 +6,8 @@ module Grapple
 			setting :no_results_message, "0 results"
 
 			def render
-				if records.total_entities > 0
+				raise ArgumentError.new "Records is nil. Did you mispell your records in your table_for or controller?" if records.nil?
+				if records.total_entries > 0
 					start_range = records.offset + 1
 					end_range = [records.offset + records.per_page, records.total_entries].min
 

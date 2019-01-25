@@ -148,6 +148,12 @@
 	padding-right: 5px;
 }
 
+/* Ransack Search Form */
+
+.grapple .search-form ul > li {
+	display: inline;
+}
+
 /* Actions */
 .grapple .toolbar .actions {
 	height: 22px;
