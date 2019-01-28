@@ -48,7 +48,7 @@ module Grapple
 						# The block should contain code to wrap all labels in html
 						# (e.g. span, div, etc.)
 						_label = if block_given?
-							yield(_label)
+							block.call(_label)
 						else
 							_label
 						end
