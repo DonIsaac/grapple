@@ -11,7 +11,7 @@ module Grapple
 				url_params = options[:url_params] || {}
 				@method = options[:method] || :get
 				cols = columns.collect do |column|
-					indent + column_header(column, options[:ransack], url_params, block)
+					indent + column_header(column, options[:ransack], url_params, &block)
 				end
 				builder.row cols.join("\n"), :class => row_class
 			end
